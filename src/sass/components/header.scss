@@ -1,0 +1,142 @@
+.header {
+	position: fixed;
+
+	height: 90px;
+	width: 100%;
+
+	@extend %subtitle;
+
+	background: $color-grad;
+
+	transition: all 0.5s ease;
+
+	&--small {
+		height: 60px;
+	}
+
+	&__inner {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		margin-right: 15px;
+		height: 70px;
+		min-width: 70px;
+
+		transition: all 0.5s ease;
+
+		&--small {
+			margin-right: 45px;
+			height: 40px;
+			min-width: 40px;
+		}
+	}
+
+	&__logo-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.menu {
+	width: 100%;
+	max-width: 785px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		padding: 10px 0;
+		margin-right: 15px;
+		color: $color-second;
+		white-space: nowrap;
+
+		position: relative;
+
+		transition: all 0.5s ease;
+
+		&:hover {
+			color: white;
+		}
+
+		&:after {
+			content: "";
+			height: 2px;
+			width: 0%;
+
+			position: absolute;
+			left: 0;
+			bottom: 5px;
+
+			background-color: $color-second;
+
+			transition: all 0.5s ease;
+		}
+
+		&:hover::after {
+			width: 100%;
+		}
+	}
+}
+
+.header-contacts {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__tel,
+	&__email {
+		text-align: center;
+
+		color: $color-second;
+		text-shadow: 0 0 0px rgba($color-second, 0);
+
+		transition: all 0.2s ease;
+
+		&:hover {
+			text-shadow: 0 0 5px rgba($color-second, 0.4);
+			color: white;
+		}
+	}
+
+	&__tel {
+		font-weight: 700;
+	}
+
+	&__social {
+		display: flex;
+		gap: 15px;
+	}
+
+	&__link {
+		width: 30px;
+		height: 30px;
+		color: white;
+
+		opacity: 0.6;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			opacity: 1;
+			color: white;
+		}
+	}
+
+	&__link-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

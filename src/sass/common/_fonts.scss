@@ -8,4 +8,7 @@
 	}
 }
 
-// @include font-face("Montserrat", "#{$fonts-root}Montserrat-Bold", normal, 700);
+@include font-face("FiraSans", "#{$fonts-root}FiraSans-Regular", normal, 400);
+@include font-face("FiraSans", "#{$fonts-root}FiraSans-Medium", normal, 500);
+@include font-face("IstokWeb", "#{$fonts-root}IstokWeb-Regular", normal, 400);
+@include font-face("IstokWeb", "#{$fonts-root}IstokWeb-Bold", normal, 700);

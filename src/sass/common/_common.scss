@@ -1,3 +1,7 @@
+html {
+	font-size: 16px;
+}
+
 body {
 	min-height: 100%;
 	min-width: 320px;
@@ -5,13 +9,19 @@ body {
 	
 	display: flex;
 	flex-direction: column;
+
+	font: 1.25rem/1.5 "FiraSans", sans-serif;
+	color: $color-primary;
 }
 
 .main {
+	margin-top: 90px;
+
 	flex-grow: 1;
 }
 
 .container {
+	height: 100%;
 	max-width: 1330px;
 	padding: 0 15px;
 	margin: 0 auto;
