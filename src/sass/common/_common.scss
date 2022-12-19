@@ -1,0 +1,18 @@
+body {
+	min-height: 100%;
+	min-width: 320px;
+	overflow-x: hidden;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 1330px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
