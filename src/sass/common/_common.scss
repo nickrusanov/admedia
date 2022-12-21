@@ -15,7 +15,7 @@ body {
 }
 
 .main {
-	margin-top: 190px;
+	padding-top: 60px;
 
 	flex-grow: 1;
 }
@@ -69,5 +69,34 @@ body {
 		padding-left: 15px;
 		font-size: 18px;
 		color: $color-primary;
+	}
+}
+
+.btn {
+	padding: 15px 20px;
+
+	font-size: 24px;
+	font-family: $font-title;
+	font-weight: bold;
+	color: $color-second;
+
+	background: $color-grad;
+	border-radius: 5px;
+
+	position: relative;
+
+	&--request {
+		padding-right: 60px;
+
+		&::after {
+			content: '';
+			height: 30px;
+			width: 30px;
+
+			position: absolute;
+			right: 20px;
+
+			background: center / cover no-repeat url('../img/arrow.svg');
+		}
 	}
 }
