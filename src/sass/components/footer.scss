@@ -1,0 +1,61 @@
+.footer {
+	&__content {
+		padding: 60px 0;
+
+		background-color: $color-bg;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__box {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	&__logo {
+		margin: 0 auto 30px auto;
+	}
+
+	&__text--about {
+		padding: 0 15px;
+
+		font-size: 18px;
+		text-align: center;
+	}
+
+	&__text--service {
+		font-size: 22px;
+		line-height: 36px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		font: 36px $font-title;
+	}
+
+	&__images-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 15px;
+	}
+
+	&__img {
+		width: 90px;
+	}
+}
+
+.copyright {
+	background-color: $color-brand;
+
+	&__text {
+		padding: 15px 0;
+
+		color: $color-second;
+		text-align: center;
+	}
+}
