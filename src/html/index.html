@@ -22,7 +22,7 @@
 								<h1 class="slider__title">Производим рекламу более 10 лет</h1>
 								<p class="slider__text">Сотни довольных клиентов по всей стране – от МТС до Audi Высокое качество по
 									доступной цене</p>
-								<button class="btn btn--request">ПОДАТЬ ЗАЯВКУ</button>
+								<button class="btn btn--request" data-path="request">ПОДАТЬ ЗАЯВКУ</button>
 							</div>
 						</div>
 					</div>
@@ -36,7 +36,7 @@
 							<h1 class="slider__title">Сами производим и оформляем</h1>
 							<p class="slider__text">Занимаемся оформлением мероприятий и производством нестандартных рекламных
 								конструкция</p>
-							<button class="btn btn--request">ПОДАТЬ ЗАЯВКУ</button>
+							<button class="btn btn--request" data-path="request">ПОДАТЬ ЗАЯВКУ</button>
 						</div>
 					</div>
 				</li>
@@ -49,7 +49,7 @@
 							<h1 class="slider__title">Разработаем сайт для ваших товаров</h1>
 							<p class="slider__text">Корпоративные сайты любой сложности, которые привлекут новых клиентов и деловых
 								партнёров</p>
-							<button class="btn btn--request">ПОДАТЬ ЗАЯВКУ</button>
+							<button class="btn btn--request" data-path="request">ПОДАТЬ ЗАЯВКУ</button>
 						</div>
 					</div>
 				</li>
@@ -100,6 +100,31 @@
 	</main>
 
 	@@include('./chunk/footer.html')
+
+	<div class="modal" data-target="request">
+		<div class="modal__box">
+			<div class="modal__head">
+				<h5 class="modal__title">ПОДАТЬ ЗАЯВКУ ОНЛАЙН</h5>
+				<button class="modal__close">
+					<img class="modal__close-img" src="./img/close.svg" alt="close">
+				</button>
+			</div>
+
+			<div class="modal__content">
+				<form class="modal__form" action="#">
+					<input class="modal__input" type="text" name="name" placeholder="Введите имя" maxlength="80">
+					<input class="modal__input" type="tel" name="tel" placeholder="Введите телефон">
+					<input class="modal__input" type="email" name="email" placeholder="Введите e-mail" maxlength="80">
+					<textarea class="modal__textarea" name="message" placeholder="Введите сообщение" maxlength="500"></textarea>
+					<div class="modal__rules">
+						<input class="modal__checkbox" id="rules" type="checkbox">
+						<label class="modal__label" for="rules">Я даю согласие на обработку персональных данных</label>
+					</div>
+					<button class="btn btn--send" type="submit">ОТПРАВИТЬ</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/script.min.js"></script>
 </body>

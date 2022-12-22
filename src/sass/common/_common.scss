@@ -75,10 +75,7 @@ body {
 .btn {
 	padding: 15px 20px;
 
-	font-size: 24px;
-	font-family: $font-title;
-	font-weight: bold;
-	color: $color-second;
+	@extend %btn-title;
 
 	background: $color-grad;
 	border-radius: 5px;
@@ -89,14 +86,146 @@ body {
 		padding-right: 60px;
 
 		&::after {
-			content: '';
+			content: "";
 			height: 30px;
 			width: 30px;
 
 			position: absolute;
 			right: 20px;
 
-			background: center / cover no-repeat url('../img/arrow.svg');
+			background: center / cover no-repeat url("../img/arrow.svg");
 		}
+	}
+}
+
+.modal {
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: -150px;
+	bottom: 0;
+	z-index: 10;
+
+	background-color: rgba(#000, 0.5);
+
+	transition: all 0.5s ease;
+
+	&--visible {
+		opacity: 1;
+		visibility: visible;
+
+		top: 0;
+	}
+
+	&__box {
+		width: 800px;
+
+		border-radius: 15px;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 0 10px rgba($color-brand, 0.5);
+		}
+	}
+
+	&__head {
+		border-radius: 15px 15px 0 0;
+		background: $color-grad;
+
+		position: relative;
+	}
+
+	&__title {
+		@extend %btn-title;
+
+		padding: 12px 0;
+
+		text-align: center;
+	}
+
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+
+	&__content {
+		padding: 50px;
+		background-color: #fff;
+		border-radius: 0 0 15px 15px;
+	}
+
+	&__input,
+	&__textarea {
+		width: 100%;
+		padding: 10px 20px;
+		margin-bottom: 30px;
+
+		border-radius: 5px;
+		border: 2px solid $color-brand;
+
+		transition: all 0.4s ease;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 10px rgba($color-brand, 0.5);
+		}
+	}
+
+	&__textarea {
+		height: 150px;
+		resize: none;
+	}
+
+	&__label {
+		padding-left: 35px;
+
+		position: relative;
+
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+
+			position: absolute;
+			left: 0;
+			top: 1px;
+
+			border-radius: 5px;
+			border: 2px solid $color-brand;
+		}
+	}
+
+	&__checkbox {
+		display: none;
+
+		&:checked + .modal__label:after {
+			content: "";
+			width: 20px;
+			height: 20px;
+
+			position: absolute;
+			left: 0;
+			top: 1px;
+
+			background: url("../img/check.svg");
+		}
+
+		&:checked + .modal__label:before {
+			background-color: $color-brand;
+		}
+	}
+
+	&__rules {
+		margin-bottom: 40px;
 	}
 }
