@@ -33,4 +33,10 @@ export default {
 		dist: `${distPath}/fonts`,
 		watch: `${srcPath}/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`
 	},
+
+	files: {
+		src: `${srcPath}/files/*.*`,
+		dist: `${distPath}/files`,
+		watch: `${srcPath}/files/*.*`
+	}
 }

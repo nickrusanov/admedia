@@ -82,19 +82,54 @@ body {
 
 	position: relative;
 
+	&::after {
+		content: "";
+		height: 30px;
+		width: 30px;
+
+		position: absolute;
+	}
+
 	&--request {
 		padding-right: 60px;
 
 		&::after {
-			content: "";
-			height: 30px;
-			width: 30px;
-
-			position: absolute;
 			right: 20px;
 
 			background: center / cover no-repeat url("../img/arrow.svg");
 		}
+	}
+}
+
+.link-btn {
+	padding: 10px;
+	padding-left: 38px;
+
+	font: bold 18px $font-title;
+	color: $color-brand;
+	white-space: nowrap;
+
+	border: 2px solid $color-brand;
+	border-radius: 5px;
+
+	position: relative;
+
+	&::after {
+		content: "";
+		width: 20px;
+
+		position: absolute;
+		left: 10px;
+	}
+
+	&--presentation::after {
+		height: 22px;
+		background: center / cover no-repeat url("../img/presentation.svg");
+	}
+
+	&--feedback::after {
+		height: 22px;
+		background: center / cover no-repeat url("../img/feedback.svg");
 	}
 }
 
@@ -152,6 +187,7 @@ body {
 
 	&__close {
 		position: absolute;
+		z-index: 12;
 		right: 10px;
 		top: 10px;
 	}
@@ -228,4 +264,15 @@ body {
 	&__rules {
 		margin-bottom: 40px;
 	}
+}
+
+.video-wrapper {
+	width: 70%;
+	height: auto;	
+
+	position: relative;
+}
+
+.video {
+	width: 100%;
 }

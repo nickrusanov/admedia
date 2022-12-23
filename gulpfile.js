@@ -15,6 +15,7 @@ import sass from './gulp/tasks/sass.js';
 import js from './gulp/tasks/js.js';
 import img from './gulp/tasks/img.js';
 import fonts from './gulp/tasks/fonts.js';
+import files from './gulp/tasks/files.js';
 
 const server = () => {
 	browserSync.init({
@@ -30,15 +31,16 @@ const watching = () => {
 	gulp.watch(path.js.watch, js).on('all', browserSync.reload)
 	gulp.watch(path.img.watch, img).on('all', browserSync.reload)
 	gulp.watch(path.fonts.watch, fonts).on('all', browserSync.reload)
+	gulp.watch(path.files.watch, files).on('all', browserSync.reload)
 }
 
 const build = gulp.series(
 	clear,
-	gulp.parallel(html, sass, js, img, fonts)
+	gulp.parallel(html, sass, js, img, fonts, files)
 )
 
 const dev = gulp.series(
-	gulp.parallel(html, sass, js, img, fonts),
+	gulp.parallel(html, sass, js, img, fonts, files),
 	gulp.parallel(server, watching)
 )
 
@@ -48,6 +50,7 @@ export { clear }
 export { js }
 export { img }
 export { fonts }
+export { files }
 export { watching }
 export { server }
 

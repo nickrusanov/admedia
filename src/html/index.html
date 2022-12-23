@@ -66,11 +66,34 @@
 
 		<section class="about" id="about">
 			<h2 class="title">КОМПАНИЯ «ADMEDIA»</h2>
-
+			<div class="container">
+				<div class="about__inner">
+					<div class="about__column">
+						<p class="about__text">«AdMedia» — рекламное агентство полного цикла. Наша деятельность основана на
+							предоставлении услуг по полному медиа-сопровождению бизнеса за счет реализации эффективной системы,
+							основанной на грамотном размещении наружной рекламы.</p>
+						<p class="about__text">Компания предоставляет комплекс услуг, начиная от разработки и печати полиграфических
+							материалов и заканчивая реализацией проектов на базе Digital технологий.</p>
+						<div class="about__buttons">
+							<a class="link-btn link-btn--presentation" href="./files/ADMEDIA.pdf" target="_blank">ПРЕЗЕНТАЦИЯ</a>
+							<a class="link-btn link-btn--feedback" href="#feedback">ОТЗЫВЫ О НАС</a>
+						</div>
+					</div>
+					<div class="about__column">
+						<button class="about__video">
+							<div class="about__preview-wrapper">
+								<img class="about__preview" src="./img/preview.jpg" alt="preview">
+							</div>
+						</button>
+					</div>
+				</div>
+			</div>
 		</section>
+
 		<section class="cooperation">
 			<h3 class="subtitle">СОТРУДНИЧАЯ С НАМИ ВЫ ПОЛУЧАЕТЕ</h3>
 		</section>
+
 
 		<section class="production" id="production">
 			<h2 class="title">НАШЕ ПРОИЗВОДСТВО</h2>
@@ -80,10 +103,12 @@
 			<h3 class="subtitle">ЧТО МЫ ПРОИЗВОДИМ</h3>
 		</section>
 
+
 		<section class="portfolio" id="portfolio">
 			<h2 class="title">НАШИ РАБОТЫ</h2>
 
 		</section>
+
 
 		<section class="feedback" id="feedback">
 			<h2 class="title">ОТЗЫВЫ</h2>
@@ -92,6 +117,7 @@
 		<section class="brands">
 			<h3 class="subtitle">НАМ ДОВЕРЯЮТ</h3>
 		</section>
+
 
 		<section class="contacts" id="contacts">
 			<h2 class="title">КОНТАКТЫ</h2>
@@ -123,6 +149,15 @@
 					<button class="btn btn--send" type="submit">ОТПРАВИТЬ</button>
 				</form>
 			</div>
+		</div>
+	</div>
+
+	<div class="modal modal--video">
+		<div class="video-wrapper">
+			<button class="modal__close">
+				<img class="modal__close-img" src="./img/close.svg" alt="close">
+			</button>
+			<video class="video" src="./files/video.mp4" controls></video>
 		</div>
 	</div>
 

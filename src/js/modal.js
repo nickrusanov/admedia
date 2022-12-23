@@ -1,6 +1,6 @@
-const buttons = document.querySelectorAll('.btn[data-path]');
-const modals = document.querySelectorAll('.modal');
-const closeImg = document.querySelector('.modal__close-img');
+const buttons = document.querySelectorAll('button[data-path]');
+const modals = document.querySelectorAll('.modal[data-target]');
+const closeImgs = document.querySelectorAll('.modal__close-img');
 
 buttons.forEach(btn => {
 	btn.addEventListener('click', () => {
@@ -12,7 +12,7 @@ buttons.forEach(btn => {
 
 modals.forEach(modal => {
 	modal.addEventListener('click', e => {
-		if (e.target === modal || e.target === closeImg) {
+		if (e.target === modal || Array.from(closeImgs).includes(e.target)) {
 			modal.classList.remove('modal--visible');
 		}
 	})
