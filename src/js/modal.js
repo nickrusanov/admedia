@@ -16,4 +16,9 @@ modals.forEach(modal => {
 			modal.classList.remove('modal--visible');
 		}
 	})
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape') {
+			modal.classList.remove('modal--visible');
+		}
+	})
 })

@@ -73,6 +73,7 @@ body {
 }
 
 .btn {
+	display: block;
 	padding: 15px 20px;
 
 	@extend %btn-title;
