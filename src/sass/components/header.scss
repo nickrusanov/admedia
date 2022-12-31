@@ -41,6 +41,15 @@
 		height: 100%;
 		object-fit: cover;
 	}
+
+	&__hamburger {
+		display: none;
+	}
+
+	&__hamburger-img {
+		width: 50px;
+		height: 38px;
+	}
 }
 
 .menu {
@@ -49,12 +58,13 @@
 
 	&__list {
 		display: flex;
+		gap: 15px;
+		margin-right: 15px;
 		justify-content: space-between;
 	}
 
 	&__btn {
 		padding: 10px 0;
-		margin-right: 15px;
 		color: $color-second;
 		white-space: nowrap;
 
@@ -99,6 +109,7 @@
 	&__tel,
 	&__email {
 		text-align: center;
+		white-space: nowrap;
 
 		color: $color-second;
 		text-shadow: 0 0 0px rgba($color-second, 0);
@@ -139,5 +150,37 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+}
+
+//MEDIA
+
+@media (max-width: 1120px) {
+	.header-contacts__social {
+		display: none;
+	}
+
+	.menu__btn {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 992px) {
+	.header-contacts {
+		display: none;
+	}
+
+	.menu__list {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.menu__list {
+		display: none;
+	}
+
+	.header__hamburger {
+		display: block;
 	}
 }

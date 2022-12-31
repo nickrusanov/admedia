@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./chunk/head.html', {
+"title": "Портфолио | ADMEDIA",
+"desc":
+"«AdMedia» — рекламное агентство полного цикла. Здесь представлены наши работы."
+})
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<a href="index.html" class="header__logo">
+					<img class="header__logo-img" src="./img/logo.png" alt="logo">
+				</a>
+
+				<div class="menu header__menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#about">О КОМПАНИИ</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#production">ПРОИЗВОДСТВО</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#portfolio">ПОРТФОЛИО</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#feedback">ОТЗЫВЫ</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#contacts">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="header-contacts">
+					<div class="header-contacts__content">
+						<a class="header-contacts__tel" href="tel:+79543429783">+7 (954) 342 97 83</a>
+						<a class="header-contacts__email" href="mailto:admedia@mail.ru">admedia@mail.ru</a>
+					</div>
+
+					<div class="header-contacts__social">
+						<a class="header-contacts__link" href="https://www.whatsapp.com" target="_blank">
+							<img class="header-contacts__link-img" src="./img/whatsapp.svg" alt="whatsapp">
+						</a>
+						<a class="header-contacts__link" href="https://www.telegram.org" target="_blank">
+							<img class="header-contacts__link-img" src="./img/telegram.svg" alt="telegram">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="portfolio" id="portfolio">
+			<div class="container">
+				<h2 class="title">НАШИ РАБОТЫ</h2>
+				<div class="portfolio__inner">
+					<a class="portfolio__link portfolio__link--big" href="portfolio-nike.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-nike1.jpg" alt="nike">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-cola.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-cola.jpg" alt="cola">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-apple.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-apple.jpg" alt="apple">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-audi.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-audi.jpg" alt="audi">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-nike.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-nike2.jpg" alt="nike">
+					</a>
+
+
+
+					<a class="portfolio__link" href="portfolio-cola.html">
+						<img class="portfolio__img" src="./img/content/portfolio/preview-cola2.jpg" alt="cola">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-nike.html">
+						<img class="portfolio__img" src="./img/content/portfolio/preview-nike3.jpg" alt="nike">
+					</a>
+
+					<a class="portfolio__link portfolio__link--big" href="portfolio-apple.html">
+						<img class="portfolio__img portfolio__img-big" src="./img/content/portfolio/preview-apple2.jpg" alt="apple">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-audi.html">
+						<img class="portfolio__img" src="./img/content/portfolio/preview-audi2.jpg" alt="audi">
+					</a>
+
+					<a class="portfolio__link" href="portfolio-apple.html">
+						<img class="portfolio__img" src="./img/content/portfolio/preview-apple3.jpg" alt="apple">
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-icons section-icons--white">
+			<div class="container">
+				<h3 class="subtitle">НАМ ДОВЕРЯЮТ</h3>
+				<div class="brands">
+					<div class="brands__slider">
+						<img class="brands__slider-img" id="cola" src="./img/logo/cola.png" alt="cola">
+		
+						<img class="brands__slider-img" src="./img/logo/lays.png" alt="lays">
+		
+						<img class="brands__slider-img" src="./img/logo/sprite.png" alt="sprite">
+		
+						<img class="brands__slider-img" src="./img/logo/ps.png" alt="ps">
+		
+						<img class="brands__slider-img" src="./img/logo/fanta.png" alt="fanta">
+		
+						<img class="brands__slider-img" src="./img/logo/intel.png" alt="intel">
+		
+						<img class="brands__slider-img" src="./img/logo/nike.png" alt="nike">
+		
+						<img class="brands__slider-img" src="./img/logo/mars.png" alt="mars">
+		
+						<img class="brands__slider-img" src="./img/logo/lada.png" alt="lada">
+					</div>
+		
+					<div class="controls">
+						<button class="controls__btn controls__btn--prev controls__btn--left" id="prevBrand"></button>
+						<button class="controls__btn controls__btn--next controls__btn--right" id="nextBrand"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		@@include('./chunk/chat.html')
+	</main>
+
+	@@include('./chunk/footer.html')
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

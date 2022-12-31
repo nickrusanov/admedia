@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./chunk/head.html', {
+"title": " | ADMEDIA",
+"desc":"text"
+})
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<a href="index.html" class="header__logo">
+					<img class="header__logo-img" src="./img/logo.png" alt="logo">
+				</a>
+
+				<div class="menu header__menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#about">О КОМПАНИИ</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#production">ПРОИЗВОДСТВО</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#portfolio">ПОРТФОЛИО</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#feedback">ОТЗЫВЫ</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__btn" href="index.html#contacts">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="header-contacts">
+					<div class="header-contacts__content">
+						<a class="header-contacts__tel" href="tel:+79543429783">+7 (954) 342 97 83</a>
+						<a class="header-contacts__email" href="mailto:admedia@mail.ru">admedia@mail.ru</a>
+					</div>
+
+					<div class="header-contacts__social">
+						<a class="header-contacts__link" href="https://www.whatsapp.com" target="_blank">
+							<img class="header-contacts__link-img" src="./img/whatsapp.svg" alt="whatsapp">
+						</a>
+						<a class="header-contacts__link" href="https://www.telegram.org" target="_blank">
+							<img class="header-contacts__link-img" src="./img/telegram.svg" alt="telegram">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+
+		@@include('./chunk/chat.html')
+	</main>
+
+	@@include('./chunk/footer.html')
+
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>

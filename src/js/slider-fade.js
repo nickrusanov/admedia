@@ -1,3 +1,4 @@
+if (document.querySelector('.slider__item')) {
 const slides = document.querySelectorAll('.slider__item');
 const buttons = document.querySelectorAll('.slider__btn');
 let slideId = 0;
@@ -24,3 +25,4 @@ buttons.forEach((btn, index) => {
 })
 
 const timerId = setInterval(slideChangeByTime, 6000);
+}
