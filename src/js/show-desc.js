@@ -46,6 +46,10 @@ if (document.querySelector('.section-icons__desc-wrapper')) {
 
 	iconButtons.forEach((btn, index) => {
 		btn.addEventListener('click', () => {
+			if (window.innerWidth < 768) {
+				return;
+			}
+			
 			if (boxId === index && !descClosed) {
 				closeBox();
 			} else {

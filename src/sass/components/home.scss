@@ -159,7 +159,6 @@
 	}
 
 	&__preview {
-		min-height: 325px;
 		object-fit: cover;
 
 		border-radius: 5px;
@@ -217,8 +216,8 @@
 	}
 
 	&__item-img {
-		width: 80px;
-		height: 80px;
+		min-width: 80px;
+		min-height: 80px;
 		margin: 0 auto 20px;
 	}
 
@@ -278,15 +277,12 @@
 
 .production {
 	&__text {
+		text-align: justify;
 		margin-bottom: 30px;
 	}
 
 	&__content {
 		margin-bottom: 60px;
-	}
-
-	&__subtitle {
-		font-size: 28px;
 	}
 
 	&__equipment {
@@ -387,6 +383,7 @@
 
 	&__img {
 		width: 100%;
+		min-width: 240px;
 		height: 100%;
 		object-fit: cover;
 
@@ -468,6 +465,20 @@
 
 // MEDIA
 
+@media (max-width: 1280px) {
+	.section-icons__item--wide {
+		max-width: 300px;
+	}
+
+	.feedback__author {
+		padding-left: 30px;
+	}
+
+	.feedback__img-wrapper:after {
+		left: -30px;
+	}
+}
+
 @media (max-width: 992px) {
 	.about__inner {
 		flex-direction: column;
@@ -475,5 +486,109 @@
 
 	.about__column {
 		max-width: none;
+	}
+}
+
+@media (max-width: 840px) {
+	.production__equipment-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.production__equipment-item {
+		max-width: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.slider__title {
+		font-size: 48px;
+	}
+
+	.slider__text {
+		font-size: 20px;
+	}
+
+	.section-icons__item--wide {
+		max-width: 200px;
+	}
+
+	.section-icons__item-title {
+		font-size: 20px;
+	}
+
+	.feedback__content-item {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 60px;
+	}
+
+	.feedback__img-wrapper {
+		height: 300px;
+		max-width: none;
+	}
+
+	.contacts__inner {
+		flex-direction: column;
+	}
+
+	.contacts__contents {
+		max-width: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.about__buttons {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.slider__title {
+		font-size: 40px;
+	}
+
+	.slider__content {
+		top: 15vh;
+	}
+
+	.about__video {
+		padding: 20px;
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	.section-icons__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	.section-icons__item-img {
+		margin-bottom: 0;
+	}
+
+	.section-icons__item {
+		max-width: none;
+	}
+
+	.section-icons__item-title {
+		text-align: left;
+	}
+
+	.section-icons__list {
+		margin-bottom: 30px;
+	}
+
+	.section-icons__desc-btn {
+		display: flex;
+		align-items: center;
+	}
+
+	.section-icons--brands {
+		display: none;
+	}
+
+	.feedback {
+		margin-bottom: 0;
 	}
 }

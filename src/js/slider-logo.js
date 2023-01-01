@@ -11,16 +11,28 @@ if (document.querySelector('.brands__slider')) {
 	let logoShift = -1;
 
 	const logoQtyChange = () => {
-		Math.floor(logoBox.offsetWidth / 180) > 6
-			? logoQty = 6
-			: logoQty = Math.floor(logoBox.offsetWidth / 180);
+		if (window.innerWidth >= 992) {
+			Math.floor(logoBox.offsetWidth / 180) > 6
+				? logoQty = 6
+				: logoQty = Math.floor(logoBox.offsetWidth / 180);
 
-		logoGap = (logoBox.offsetWidth - logoQty * 160) / (logoQty - 1);
+			logoGap = (logoBox.offsetWidth - logoQty * 160) / (logoQty - 1);
+		} else {
+			Math.floor(logoBox.offsetWidth / 120) > 6
+				? logoQty = 6
+				: logoQty = Math.floor(logoBox.offsetWidth / 120);
+
+			logoGap = (logoBox.offsetWidth - logoQty * 100) / (logoQty - 1);
+		}
 	}
 
 	const logoChangePosition = () => {
 		logos.forEach((logo, i) => {
-			logo.style.left = (logoShift + i) * (160 + logoGap) + 'px';
+			if (window.innerWidth >= 992) {
+				logo.style.left = (logoShift + i) * (160 + logoGap) + 'px';
+			} else {
+				logo.style.left = (logoShift + i) * (100 + logoGap) + 'px';
+			}
 		})
 	}
 

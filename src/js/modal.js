@@ -8,6 +8,7 @@ if (document.querySelector('.modal')) {
 			document
 				.querySelector(`.modal[data-target=${btn.dataset.path}]`)
 				.classList.add('modal--visible');
+			body.classList.add('pin');
 		})
 	})
 
@@ -15,11 +16,13 @@ if (document.querySelector('.modal')) {
 		modal.addEventListener('click', e => {
 			if (e.target === modal || Array.from(closeImgs).includes(e.target)) {
 				modal.classList.remove('modal--visible');
+				body.classList.remove('pin');
 			}
 		})
 		document.addEventListener('keydown', e => {
 			if (e.key === 'Escape') {
 				modal.classList.remove('modal--visible');
+				body.classList.remove('pin');
 			}
 		})
 	})
