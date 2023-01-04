@@ -48,12 +48,22 @@ hamburgerBtn.addEventListener('click', menuToggle);
 window.addEventListener('orientationchange', menuClose);
 
 window.addEventListener('resize', () => {
-	window.innerWidth < 768 
-	? menu.classList.add('menu--anim')
-	: menu.classList.remove('menu--anim')
+	window.innerWidth < 768
+		? menu.classList.add('menu--anim')
+		: menu.classList.remove('menu--anim')
 })
 
 // HEADER NAVIGATION
+
+if (document.querySelector('a[href^="#"]')) {
+	const links = document.querySelectorAll('a[href^="#"]');
+
+	links.forEach(link => {
+		link.addEventListener('click', event => {
+			event.preventDefault();
+		})
+	})
+}
 
 if (document.querySelector('a[scroll]')) {
 	const links = document.querySelectorAll('a[scroll]');
@@ -61,7 +71,6 @@ if (document.querySelector('a[scroll]')) {
 	links.forEach(link => {
 		link.addEventListener('click', event => {
 			if (window.innerWidth > 768 || !link.classList.contains('menu__btn')) {
-				event.preventDefault();
 				document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
 			} else {
 				menuToggle();
