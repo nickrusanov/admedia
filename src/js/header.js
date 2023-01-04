@@ -55,8 +55,8 @@ window.addEventListener('resize', () => {
 
 // HEADER NAVIGATION
 
-if (document.querySelector('a[href^="#"]')) {
-	const links = document.querySelectorAll('a[href^="#"]');
+if (document.querySelector('a[scroll]')) {
+	const links = document.querySelectorAll('a[scroll]');
 
 	links.forEach(link => {
 		link.addEventListener('click', event => {
