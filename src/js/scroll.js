@@ -1,8 +1,8 @@
 if (document.getElementById('about')) {
 	const scrollBtn = document.querySelector('.slider__scroll-btn');
-	const about = document.getElementById('about');
 
-	scrollBtn.addEventListener('click', () => {
-		about.scrollIntoView({ behavior: 'smooth' });
+	scrollBtn.addEventListener('click', event => {
+		event.preventDefault();
+		document.querySelector(scrollBtn.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
 	})
 }

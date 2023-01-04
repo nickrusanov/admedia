@@ -91,10 +91,20 @@ body {
 		font-size: 18px;
 	}
 
+	&__item-link:hover + &__link-text {
+		color: $color-brand;
+	}
+
 	&__link-text {
 		padding-left: 15px;
 		font-size: 18px;
 		color: $color-primary;
+
+		transition: all 0.2s ease;
+
+		&:hover {
+			color: $color-brand;
+		}
 	}
 
 	&__title {
@@ -102,7 +112,7 @@ body {
 
 		font-size: 18px;
 		font-weight: 500;
-		color: rgba($color-primary, 0.5);
+		color: rgba($color-primary, 0.6);
 	}
 }
 
@@ -116,6 +126,12 @@ body {
 	border-radius: 5px;
 
 	position: relative;
+
+	transition: background-color 0.3s ease, transform 0.2s ease-in;
+
+	&:hover {
+		background-color: $color-brand-hover;
+	}
 
 	&::after {
 		content: "";
@@ -189,6 +205,16 @@ body {
 	border-radius: 5px;
 
 	position: relative;
+
+	transition: box-shadow 0.3s ease, transform 0.2s ease-in;
+
+	&:hover {
+		box-shadow: 0 0 10px rgba($color-brand, 0.5), inset 0 0 2px rgba($color-brand, 0.4);
+	}
+
+	&:active {
+		transform: scale(0.95);
+	}
 
 	&::before {
 		content: "";
@@ -273,6 +299,16 @@ body {
 		z-index: 12;
 		right: 10px;
 		top: 10px;
+
+		transition: all 0.2s ease;
+
+		&:hover {
+			transform: scale(1.08);
+		}
+
+		&:active {
+			transform: scale(0.92);
+		}
 	}
 
 	&__content {
@@ -587,20 +623,61 @@ body {
 
 		transition: all 0.4s ease;
 
+		position: relative;
+
+		&:hover:before {
+			content: "";
+
+			position: absolute;
+			top: -6px;
+
+			border: 6px solid transparent;
+			border-top-color: $color-brand;
+		}
+
+		&:hover:after {
+			padding: 2px 5px;
+
+			position: absolute;
+			top: -28px;
+
+			background-color: $color-brand;
+			border-radius: 5px;
+
+			font-size: 12px;
+			color: $color-second;
+		}
+
 		&--vk:hover {
 			background-color: #0a5499;
+
+			&:after {
+				content: "Вконтакте";
+			}
 		}
 
 		&--in:hover {
 			background-color: #dd1774;
+
+			&:after {
+				content: "Instagram";
+			}
 		}
 
 		&--yt:hover {
 			background-color: #b80909;
+
+			&:after {
+				content: "YouTube";
+			}
 		}
 
 		&--tw:hover {
 			background-color: #0eb7bd;
+
+			&:after {
+				content: "Twitter";
+			}
 		}
 	}
 
@@ -638,6 +715,10 @@ body {
 		transition: all 0.5s ease;
 
 		position: relative;
+
+		&:hover {
+			background-color: $color-brand-hover;
+		}
 
 		&--hidden {
 			opacity: 0;
@@ -707,6 +788,16 @@ body {
 		z-index: 12;
 		right: 10px;
 		top: 10px;
+
+		transition: all 0.2s ease;
+
+		&:hover {
+			transform: scale(1.08);
+		}
+
+		&:active {
+			transform: scale(0.92);
+		}
 	}
 
 	&__content {
@@ -830,10 +921,6 @@ body {
 		margin-bottom: 40px;
 	}
 
-	.section-icons__desc-btn {
-		cursor: default;
-	}
-
 	.modal__content {
 		width: 100%;
 		height: calc(100vh - 60px);
@@ -853,6 +940,7 @@ body {
 
 @media (max-width: 480px) {
 	.modal__content {
+		min-height: calc(100vh - 60px);
 		height: auto;
 	}
 
@@ -898,19 +986,15 @@ body {
 		bottom: 20px;
 	}
 
-	.modal {
+	.modal[data-target] {
 		bottom: auto;
 		top: auto;
-	}
-
-	.chat__box--visible {
-		bottom: auto;
 	}
 
 	.chat--mobile-open {
 		width: 100%;
 		height: 100vh;
-		top:0;
+		top: 0;
 		left: 0;
 		right: auto;
 		bottom: auto;
@@ -924,6 +1008,7 @@ body {
 
 	.chat__box--visible {
 		width: 100%;
-		height: calc(100vh - 60px);
+		height: 100vh;
+		bottom: auto;
 	}
 }

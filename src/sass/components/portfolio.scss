@@ -10,6 +10,60 @@
 		&--big {
 			grid-row-start: span 2;
 		}
+
+		position: relative;
+
+		&::after,
+		&::before {
+			opacity: 0;
+			content: "";
+
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			transition: all 0.4s ease-out;
+		}
+
+		&::after {
+			background: $color-brand;
+		}
+
+		&::before {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+
+			color: $color-second;
+			font-size: 44px;
+		}
+
+		&--nike::before {
+			content: "NIKE";
+		}
+
+		&--apple::before {
+			content: "APPLE";
+		}
+
+		&--audi::before {
+			content: "AUDI";
+		}
+
+		&--cola::before {
+			content: "COCA-COLA";
+		}
+
+		&:hover::after {
+			opacity: 0.8;
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
 	}
 
 	&__img {
@@ -115,6 +169,10 @@
 
 	.portfolio-item__social {
 		margin-left: 0;
+	}
+
+	.portfolio__link::before {
+		font-size: 36px;
 	}
 }
 

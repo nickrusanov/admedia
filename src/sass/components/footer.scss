@@ -50,7 +50,31 @@
 	}
 
 	&__img {
-		width: 90px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__portfolio-link {
+		position: relative;
+
+		&::after {
+			content: '';
+			opacity: 0;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			background-color: $color-brand;
+
+			transition: all .3s ease;
+		}
+
+		&:hover::after {
+			opacity: 0.4;
+		}
 	}
 }
 
@@ -68,8 +92,18 @@
 //MEDIA
 
 @media (max-width: 1160px) {
+	.footer__img {
+		max-height: 80px;
+	}
+
 	.footer__service-link {
 		font-size: 20px;
+
+		transition: all .2s ease;
+
+		&:hover {
+			color: $color-brand;
+		}
 	}
 
 	.footer__images-wrapper {

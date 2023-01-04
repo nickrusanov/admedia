@@ -47,6 +47,12 @@ hamburgerBtn.addEventListener('click', menuToggle);
 
 window.addEventListener('orientationchange', menuClose);
 
+window.addEventListener('resize', () => {
+	window.innerWidth < 768 
+	? menu.classList.add('menu--anim')
+	: menu.classList.remove('menu--anim')
+})
+
 // HEADER NAVIGATION
 
 if (document.querySelector('a[href^="#"]')) {

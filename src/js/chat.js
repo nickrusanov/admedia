@@ -50,7 +50,7 @@ const sendMessage = () => {
 }
 
 const chatOpenBtnHide = () => {
-	if (document.title !== 'Главная | ADMEDIA') {
+	if (document.title !== 'Главная | ADMEDIA' && !chatBox.classList.contains('chat__box--visible')) {
 		chatOpenBtn.classList.remove('chat__btn--hidden');
 		return;
 	}

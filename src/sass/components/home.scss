@@ -58,6 +58,8 @@
 
 	&__controls {
 		display: flex;
+		justify-content: center;
+		width: 100%;
 		gap: 20px;
 
 		position: absolute;
@@ -67,7 +69,8 @@
 	}
 
 	&__btn {
-		width: 100px;
+		width: 100%;
+		max-width: 100px;
 		height: 10px;
 
 		background-color: rgba($color-second, 0.3);
@@ -75,8 +78,17 @@
 
 		transition: all 0.5s ease;
 
+		&:hover {
+			background-color: rgba($color-second, 0.5);
+		}
+
 		&--active {
 			background-color: $color-second;
+
+			&:hover {
+				cursor: default;
+				background-color: $color-second;
+			}
 		}
 	}
 
@@ -90,6 +102,12 @@
 		transform: translateX(-50%);
 
 		background: center / cover no-repeat url("../img/scroll.svg");
+
+		transition: all 0.5s ease;
+
+		&:hover {
+			bottom: 3.2vh;
+		}
 	}
 }
 
@@ -122,9 +140,14 @@
 	}
 
 	&__video {
+		display: block;
 		padding: 45px;
 		padding-left: 0;
 		position: relative;
+
+		&:focus {
+			outline: none;
+		}
 
 		&::after {
 			content: "";
@@ -154,7 +177,14 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 
+			transition: all 0.3s ease;
+
 			background: center / contain no-repeat url("../img/play.svg");
+		}
+
+		&:hover::after {
+			width: 70px;
+			height: 70px;
 		}
 	}
 
@@ -202,7 +232,7 @@
 			transition: all 0.6s ease;
 
 			&:hover {
-				opacity: 0.75;
+				opacity: 0.65;
 			}
 		}
 
@@ -212,6 +242,12 @@
 
 		&--narrow {
 			max-width: 200px;
+
+			transition: all 0.2s ease;
+
+			&:hover {
+				color: $color-brand;
+			}
 		}
 	}
 
@@ -221,9 +257,16 @@
 		margin: 0 auto 20px;
 	}
 
+	&__desc-btn {
+		&:active .section-icons__item-title {
+			color: $color-brand-dark;
+		}
+	}
+
 	&__item-title {
 		padding: 0 15px;
 
+		color: $color-primary;
 		text-align: center;
 		font-size: 24px;
 	}
@@ -516,6 +559,10 @@
 		font-size: 20px;
 	}
 
+	.section-icons__desc-btn {
+		cursor: default;
+	}
+
 	.feedback__content-item {
 		grid-template-columns: repeat(1, 1fr);
 		gap: 60px;
@@ -542,7 +589,7 @@
 	}
 
 	.slider__title {
-		font-size: 40px;
+		font-size: 36px;
 	}
 
 	.slider__content {
@@ -590,5 +637,23 @@
 
 	.feedback {
 		margin-bottom: 0;
+	}
+}
+
+@media (max-height: 640px) and (max-width: 380px) {
+	.slider__controls {
+		bottom: 40px;
+	}
+
+	.slider__scroll-btn {
+		display: none;
+	}
+
+	.slider__content {
+		top: 60px;
+	}
+
+	.slider__title {
+		font-size: 30px;
 	}
 }

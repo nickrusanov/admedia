@@ -7,5 +7,6 @@ $color-primary: #15020e;
 $color-second: #f1edf3;
 $color-brand: #d1327f;
 $color-brand-dark: #b32067;
-$color-grad: linear-gradient($color-brand-dark, $color-brand, $color-brand-dark);
+$color-brand-hover: #b11f65;
+$color-grad: linear-gradient($color-brand-dark, transparent, $color-brand-dark) $color-brand;
 $color-bg: rgba(#d1327f, 0.1);

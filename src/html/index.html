@@ -15,8 +15,12 @@
 			<ul class="slider__list">
 				<li class="slider__item slider__item--active">
 					<div class="slider__item-inner">
-						<img class="slider__img" src="./img/banner/banner1.jpg" alt="banner">
-
+						<picture>
+							<source media="(max-width: 767px)" srcset="./img/background/background1-small.webp" type="image/webp">
+							<source media="(min-width: 768px)" srcset="./img/background/background1.webp" type="image/webp">
+							<source media="(max-width: 767px)" srcset="./img/background/background1-small.jpg">
+							<img class="slider__img" src="./img/background/background1.jpg" alt="background">
+						</picture>
 						<div class="container">
 							<div class="slider__content">
 								<h1 class="slider__title">Производим рекламу более 10 лет</h1>
@@ -29,7 +33,12 @@
 				</li>
 
 				<li class="slider__item">
-					<img class="slider__img" src="./img/banner/banner2.jpg" alt="banner">
+					<picture>
+						<source media="(max-width: 767px)" srcset="./img/background/background2-small.webp" type="image/webp">
+						<source media="(min-width: 768px)" srcset="./img/background/background2.webp" type="image/webp">
+						<source media="(max-width: 767px)" srcset="./img/background/background2-small.jpg">
+						<img class="slider__img" src="./img/background/background2.jpg" alt="background">
+					</picture>
 
 					<div class="container">
 						<div class="slider__content">
@@ -42,7 +51,12 @@
 				</li>
 
 				<li class="slider__item">
-					<img class="slider__img" src="./img/banner/banner3.jpg" alt="banner">
+					<picture>
+						<source media="(max-width: 767px)" srcset="./img/background/background3-small.webp" type="image/webp">
+						<source media="(min-width: 768px)" srcset="./img/background/background3.webp" type="image/webp">
+						<source media="(max-width: 767px)" srcset="./img/background/background3-small.jpg">
+						<img class="slider__img" src="./img/background/background3.jpg" alt="background">
+					</picture>
 
 					<div class="container">
 						<div class="slider__content">
@@ -56,12 +70,12 @@
 			</ul>
 
 			<div class="slider__controls">
-				<button class="slider__btn slider__btn--active"></button>
-				<button class="slider__btn"></button>
-				<button class="slider__btn"></button>
+				<a class="slider__btn slider__btn--active" href="#"></a>
+				<a class="slider__btn" href="#"></a>
+				<a class="slider__btn" href="#"></a>
 			</div>
 
-			<button class="slider__scroll-btn"></button>
+			<a class="slider__scroll-btn" href="#about"></a>
 		</section>
 
 		<section class="about" id="about">
@@ -80,11 +94,11 @@
 						</div>
 					</div>
 					<div class="about__column">
-						<button class="about__video">
+						<a class="about__video" href="#">
 							<div class="about__preview-wrapper">
 								<img class="about__preview" src="./img/preview.jpg" alt="preview">
 							</div>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -137,7 +151,8 @@
 
 					<p class="production__text">Компания «AdMedia» обладает собственными полностью автономными производственными
 						мощностями общей площадью на
-						1250 м<sup><small>2</small></sup>, которые расположены в черте города Новосибирск. Рекламные конструкции производятся из любых
+						1250 м<sup><small>2</small></sup>, которые расположены в черте города Новосибирск. Рекламные конструкции
+						производятся из любых
 						материалов, необходимых для реализации проекта.</p>
 					<p class="production__text">Сегодня, когда весь мир переходит на цифровой формат, мировой спрос на наружную
 						рекламу не только не падает,
@@ -170,45 +185,45 @@
 					<h3 class="subtitle">ЧТО МЫ ПРОИЗВОДИМ</h3>
 					<ul class="section-icons__list">
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/billboard.svg" alt="billboard">
-								<h6 class="section-icons__item-title">Реклама на щитах</h6>
-							</button>
+								<p class="section-icons__item-title">Реклама на щитах</p>
+							</a>
 						</li>
 
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/brilliant.svg" alt="brilliant">
-								<h6 class="section-icons__item-title">Эксклюзивные подиумы</h6>
-							</button>
+								<p class="section-icons__item-title">Эксклюзивные подиумы</p>
+							</a>
 						</li>
 
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/engineer.svg" alt="engineer">
-								<h6 class="section-icons__item-title">Стенды любой сложности</h6>
-							</button>
+								<p class="section-icons__item-title">Стенды любой сложности</p>
+							</a>
 						</li>
 
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/uniq.svg" alt="uniq">
-								<h6 class="section-icons__item-title">Уникальные конструкции</h6>
-							</button>
+								<p class="section-icons__item-title">Уникальные конструкции</p>
+							</a>
 						</li>
 
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/site.svg" alt="site">
-								<h6 class="section-icons__item-title">Корпоративные сайты</h6>
-							</button>
+								<p class="section-icons__item-title">Корпоративные сайты</p>
+							</a>
 						</li>
 
 						<li class="section-icons__item section-icons__item--narrow section-icons__item--hidden">
-							<button class="section-icons__desc-btn">
+							<a class="section-icons__desc-btn" href="#">
 								<img class="section-icons__item-img" src="./img/product/sign.svg" alt="sign">
-								<h6 class="section-icons__item-title">Все виды вывесок</h6>
-							</button>
+								<p class="section-icons__item-title">Все виды вывесок</p>
+							</a>
 						</li>
 					</ul>
 					<div class="section-icons__desc-wrapper">
@@ -263,23 +278,23 @@
 				<h2 class="title">НАШИ РАБОТЫ</h2>
 
 				<div class="portfolio__inner">
-					<a class="portfolio__link portfolio__link--big" href="portfolio-nike.html">
+					<a class="portfolio__link portfolio__link--nike portfolio__link--big" href="portfolio-nike.html">
 						<img class="portfolio__img" src="./img/content/portfolio/preview-nike1.jpg" alt="nike">
 					</a>
 
-					<a class="portfolio__link" href="portfolio-cola.html">
+					<a class="portfolio__link portfolio__link--cola" href="portfolio-cola.html">
 						<img class="portfolio__img" src="./img/content/portfolio/preview-cola.jpg" alt="nike">
 					</a>
 
-					<a class="portfolio__link" href="portfolio-apple.html">
+					<a class="portfolio__link portfolio__link--apple" href="portfolio-apple.html">
 						<img class="portfolio__img" src="./img/content/portfolio/preview-apple.jpg" alt="nike">
 					</a>
 
-					<a class="portfolio__link" href="portfolio-audi.html">
+					<a class="portfolio__link portfolio__link--audi" href="portfolio-audi.html">
 						<img class="portfolio__img" src="./img/content/portfolio/preview-audi.jpg" alt="nike">
 					</a>
 
-					<a class="portfolio__link" href="portfolio-nike.html">
+					<a class="portfolio__link portfolio__link--nike" href="portfolio-nike.html">
 						<img class="portfolio__img" src="./img/content/portfolio/preview-nike2.jpg" alt="nike">
 					</a>
 				</div>
@@ -360,8 +375,8 @@
 				</ul>
 			</div>
 			<div class="controls feedback__controls">
-				<button class="controls__btn controls__btn--prev" id="prevCite"></button>
-				<button class="controls__btn controls__btn--next" id="nextCite"></button>
+				<a class="controls__btn controls__btn--prev" id="prevCite" href="#"></a>
+				<a class="controls__btn controls__btn--next" id="nextCite" href="#"></a>
 			</div>
 
 			<button class="btn btn--feedback section-icons__btn" data-path="feedback">ОСТАВИТЬ ОТЗЫВ</button>
@@ -392,8 +407,8 @@
 					</div>
 
 					<div class="controls">
-						<button class="controls__btn controls__btn--prev controls__btn--left" id="prevBrand"></button>
-						<button class="controls__btn controls__btn--next controls__btn--right" id="nextBrand"></button>
+						<a class="controls__btn controls__btn--prev controls__btn--left" id="prevBrand" href="#"></a>
+						<a class="controls__btn controls__btn--next controls__btn--right" id="nextBrand" href="#"></a>
 					</div>
 				</div>
 			</div>
@@ -407,7 +422,7 @@
 					<div class="contacts__contents">
 						<address class="address">
 							<div class="address__item-wrapper">
-								<h6 class="address__title">Адрес:</h6>
+								<p class="address__title">Адрес:</p>
 								<div class="address__item">
 									<div class="address__img-wrapper">
 										<img class="address__img" src="./img/nav.svg" alt="location">
@@ -417,7 +432,7 @@
 							</div>
 
 							<div class="address__item-wrapper">
-								<h6 class="address__title">Время работы:</h6>
+								<p class="address__title">Время работы:</p>
 								<div class="address__item">
 									<div class="address__img-wrapper">
 										<img class="address__img" src="./img/clock.svg" alt="clock">
@@ -427,7 +442,7 @@
 							</div>
 
 							<div class="address__item-wrapper">
-								<h6 class="address__title">Телефон:</h6>
+								<p class="address__title">Телефон:</p>
 								<div class="address__item">
 									<a class="address__item-link" href="tel:+79543429783">
 										<div class="address__img-wrapper">
@@ -439,7 +454,7 @@
 							</div>
 
 							<div class="address__item-wrapper">
-								<h6 class="address__title">Почта:</h6>
+								<p class="address__title">Почта:</p>
 								<div class="address__item">
 									<a class="address__item-link" href="mailto:admedia@mail.ru">
 										<div class="address__img-wrapper">
@@ -638,8 +653,8 @@
 							<h6 class="modal__subtitle">Тип каркаса:</h6>
 							<div class="modal__radio-box">
 								<div class="modal__radio-wrapper">
-									<input class="modal__radio" type="radio" name="podium-carcass" id="podium-carcass-banner" checked>
-									<label class="modal__label modal__label--radio" for="podium-carcass-banner">Баннер</label>
+									<input class="modal__radio" type="radio" name="podium-carcass" id="podium-carcass-background" checked>
+									<label class="modal__label modal__label--radio" for="podium-carcass-background">Баннер</label>
 								</div>
 
 								<div class="modal__radio-wrapper">
