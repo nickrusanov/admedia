@@ -1104,6 +1104,10 @@ body {
   color: #15020e;
 }
 
+.footer__service-link:hover {
+  color: #d1327f;
+}
+
 .footer__text--service + .footer__text--service {
   margin-top: 8px;
 }
@@ -1637,11 +1641,12 @@ body {
 .section-icons__item-img {
   min-width: 80px;
   min-height: 80px;
-  margin: 0 auto 20px;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
-.section-icons__desc-btn:active .section-icons__item-title {
-  color: #b32067;
+.section-icons__desc-btn:hover .section-icons__item-title {
+  color: #d1327f;
 }
 
 .section-icons__item-title {
@@ -1649,6 +1654,9 @@ body {
   color: #15020e;
   text-align: center;
   font-size: 24px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .section-icons__btn {
@@ -2302,6 +2310,10 @@ body {
     max-width: none;
   }
 
+  .section-icons__desc-btn:hover .section-icons__item-title {
+    color: #15020e;
+  }
+
   .portfolio-item__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2460,7 +2472,7 @@ body {
   }
 
   .section-icons__item-img {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .section-icons__item {

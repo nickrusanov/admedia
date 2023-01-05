@@ -31,6 +31,10 @@
 		white-space: nowrap;
 		font-size: 22px;
 		color: $color-primary;
+
+		&:hover {
+			color: $color-brand
+		}
 	}
 
 	&__text--service + &__text--service {

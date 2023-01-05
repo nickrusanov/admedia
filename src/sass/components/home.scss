@@ -254,13 +254,12 @@
 	&__item-img {
 		min-width: 80px;
 		min-height: 80px;
-		margin: 0 auto 20px;
+		margin: 0 auto;
+		padding-bottom: 20px;
 	}
 
-	&__desc-btn {
-		&:active .section-icons__item-title {
-			color: $color-brand-dark;
-		}
+	&__desc-btn:hover .section-icons__item-title {
+		color: $color-brand;
 	}
 
 	&__item-title {
@@ -269,6 +268,8 @@
 		color: $color-primary;
 		text-align: center;
 		font-size: 24px;
+
+		transition: all 0.3s ease;
 	}
 
 	&__btn {
@@ -580,6 +581,10 @@
 	.contacts__contents {
 		max-width: none;
 	}
+
+	.section-icons__desc-btn:hover .section-icons__item-title {
+		color: $color-primary;
+	}
 }
 
 @media (max-width: 480px) {
@@ -611,7 +616,7 @@
 	}
 
 	.section-icons__item-img {
-		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
 	.section-icons__item {
