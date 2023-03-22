@@ -1,1 +1,13 @@
-GitHub Pages: https://nickrusanov.github.io/admedia/
+# ADMEDIA (сайт рекламного агентства)
+
+Ссылка на GitHub Pages: https://nickrusanov.github.io/admedia/
+
+Лендинг и портфолио.
+
+Проект включает:
+1. Адаптивность до 320px.
+2. Эффекты при наведении и анимации.
+3. Различные модальные окна, pop-up, формы и слайдеры.
+4. Имитация чата.
+5. Переключение основного меню при прокрутке.
+6. Технологии: HTML5, CSS3, SCSS, JavaScript, Gulp.

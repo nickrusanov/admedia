@@ -2,6 +2,8 @@
 	min-height: 500px;
 	height: calc(100vh - 60px);
 
+	position: relative;
+
 	&__img {
 		width: 100%;
 		min-height: 500px;
@@ -646,9 +648,9 @@
 }
 
 @media (max-height: 640px) and (max-width: 380px) {
-	.slider__controls {
-		bottom: 40px;
-	}
+	// .slider__controls {
+	// 	bottom: -20px;
+	// }
 
 	.slider__scroll-btn {
 		display: none;

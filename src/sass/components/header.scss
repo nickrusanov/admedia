@@ -102,19 +102,32 @@
 		&:after {
 			content: "";
 			height: 2px;
-			width: 0%;
+			width: 100%;
+			max-width: 0;
 
 			position: absolute;
-			left: 0;
+			left: 50%;
 			bottom: 8px;
+			transform: translateX(-50%);
 
 			background-color: $color-second;
 
-			transition: all 0.5s ease;
+			transition: all 0.5s ease, text-shadow 0.3s ease;
 		}
 
-		&:hover::after {
-			width: 100%;
+		&:hover {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+		}
+
+		&--active {
+			&:hover {
+				text-shadow: none;
+				color: $color-second;
+			}
+
+			&::after {
+				max-width: 100%;
+			}
 		}
 	}
 }

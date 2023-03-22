@@ -405,6 +405,7 @@ body {
 }
 
 .modal__box {
+  max-height: 100vh;
   width: 800px;
   border-radius: 15px;
   -webkit-transition: all 0.3s ease;
@@ -412,6 +413,7 @@ body {
   transition: all 0.3s ease;
   -webkit-box-shadow: 0 0 10px rgba(209, 50, 127, 0.5);
           box-shadow: 0 0 10px rgba(209, 50, 127, 0.5);
+  overflow: auto;
 }
 
 .modal__head {
@@ -1285,18 +1287,31 @@ body {
 .menu__btn:after {
   content: "";
   height: 2px;
-  width: 0%;
+  width: 100%;
+  max-width: 0;
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 8px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   background-color: #f1edf3;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease, text-shadow 0.3s ease;
+  -o-transition: all 0.5s ease, text-shadow 0.3s ease;
+  transition: all 0.5s ease, text-shadow 0.3s ease;
 }
 
-.menu__btn:hover::after {
-  width: 100%;
+.menu__btn:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+}
+
+.menu__btn--active:hover {
+  text-shadow: none;
+  color: #f1edf3;
+}
+
+.menu__btn--active::after {
+  max-width: 100%;
 }
 
 .header-contacts {
@@ -1372,6 +1387,7 @@ body {
 .slider {
   min-height: 500px;
   height: calc(100vh - 60px);
+  position: relative;
 }
 
 .slider__img {
@@ -2515,10 +2531,6 @@ body {
 }
 
 @media (max-height: 640px) and (max-width: 380px) {
-  .slider__controls {
-    bottom: 40px;
-  }
-
   .slider__scroll-btn {
     display: none;
   }
@@ -2529,6 +2541,18 @@ body {
 
   .slider__title {
     font-size: 30px;
+  }
+}
+
+@media (max-height: 650px) {
+  .modal__box {
+    width: 100%;
+  }
+
+  .modal__head,
+  .modal__content,
+  .modal__box {
+    border-radius: 0;
   }
 }
 @supports (-webkit-appearance:none){
@@ -2608,6 +2632,14 @@ body {
 }
 
  @media (max-height: 640px) and (max-width: 380px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-height: 650px){
 
 @supports (-webkit-appearance:none){
 
