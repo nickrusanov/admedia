@@ -4,7 +4,6 @@ if (document.getElementById('about')) {
 
 	// SCROLL BUTTON
 
-
 	const scrollBtn = document.querySelector('.slider__scroll-btn');
 
 	scrollBtn.addEventListener('click', event => {

@@ -60,7 +60,7 @@ if (document.querySelector('a[href^="#"]')) {
 
 	links.forEach(link => {
 		link.addEventListener('click', event => {
-			if (!link.hasAttribute('scroll')) {
+			if (!link.classList.contains('scroll')) {
 				event.preventDefault();
 				return;
 			}
